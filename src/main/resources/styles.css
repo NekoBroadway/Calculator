@@ -1,0 +1,29 @@
+#standard_window {
+    -fx-background-color: #202020;
+}
+
+Button {
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Roboto Light";
+}
+
+.buttonDark {
+    -fx-background-color: #3c3a3a;
+    -fx-font-size: 16;
+}
+
+.buttonDarker {
+    -fx-background-color: #323232;
+    -fx-font-size: 18;
+}
+
+.buttonResult {
+    -fx-background-color: #61ccff;
+    -fx-text-fill: #265164;
+    -fx-font-size: 20;
+}
+
+.entryNumberArea {
+    -fx-background-color: #202020;
+    -fx-font-size: 36;
+}

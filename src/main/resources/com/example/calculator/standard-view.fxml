@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="standard_window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.StandardController">
+    <children>
+        <GridPane alignment="CENTER" disable="true" prefHeight="150.0" prefWidth="400.0" styleClass="numberArea">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextArea fx:id="topNumberArea" disable="true" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="400.0" styleClass="numberArea" wrapText="true" />
+                <TextArea fx:id="bottomNumberArea" disable="true" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="400.0" styleClass="entryNumberArea" text="Hello" wrapText="true" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+        <GridPane hgap="5.0" layoutY="160.0" prefHeight="340.0" prefWidth="400.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="buttonClearLine" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="CE" textAlignment="CENTER" />
+                <Button fx:id="buttonClearAll" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="C" textAlignment="CENTER" GridPane.columnIndex="1" />
+                <Button fx:id="buttonDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="DEL" textAlignment="CENTER" GridPane.columnIndex="2" />
+                <Button fx:id="buttonDiv" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonDivClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="÷" textAlignment="CENTER" GridPane.columnIndex="3" />
+
+                <Button fx:id="buttonSeven" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonSevenClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="7" textAlignment="CENTER" GridPane.rowIndex="1" />
+                <Button fx:id="buttonEight" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonEightClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="buttonNine" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonNineClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="buttonMul" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="×" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Button fx:id="buttonFour" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonFourClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="4" textAlignment="CENTER" GridPane.rowIndex="2" />
+                <Button fx:id="buttonFive" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonFiveClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="buttonSix" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonSixClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="buttonDec" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="−" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Button fx:id="buttonOne" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonOneClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="1" textAlignment="CENTER" GridPane.rowIndex="3" />
+                <Button fx:id="buttonTwo" mnemonicParsing="false" onAction="#OnButtonTwoClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="buttonThree" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonThreeClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="buttonInc" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDarker" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <Button fx:id="buttonMod" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="±" textAlignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Roboto Light" size="18.0" />
+                    </font>
+                </Button>
+
+                <Button fx:id="buttonZero" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonZeroClick" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button fx:id="buttonDot" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonDark" text="." textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="buttonEqu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="buttonResult" text="=" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" />
+            </padding>
+        </GridPane>
+    </children>
+</AnchorPane>
